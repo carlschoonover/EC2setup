@@ -1,3 +1,5 @@
+sudo sed -i '1iforce_color_prompt=yes\n' ~/.bashrc
+
 ################
 ### PACKAGES ###
 ################
