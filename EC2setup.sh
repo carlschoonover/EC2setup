@@ -19,8 +19,3 @@ mkdir ~/software
 cd ~/software
 wget http://repo.continuum.io/miniconda/Miniconda-3.7.0-Linux-x86_64.sh
 bash -b Miniconda-3.7.0-Linux-x86_64.sh
-exec bash
-conda create -n klusta python=2.7 --yes
-conda install -n klusta scipy pandas=0.12 pytables=3.0 pyqt setuptools pip cython nose ipython-notebook matplotlib --yes
-conda install -n klusta numpy=1.8 --yes
-source activate klusta
