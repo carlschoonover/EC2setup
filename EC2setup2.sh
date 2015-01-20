@@ -1,5 +1,3 @@
-userName="kruncheruser"
-
 ##################
 ### CONDA VENV ###
 ##################
@@ -45,4 +43,5 @@ cd ~/software/klustakwik/
 make
 mv KlustaKwik klustakwik 
 echo >> ~/.bashrc
-echo export PATH=\"/home/$userName/software/klustakwik/:\$PATH\" >> ~/.bashrc
+#echo export PATH=\"/home/$userName/software/klustakwik/:\$PATH\" >> ~/.bashrc
+echo export PATH=\"$PWD/:\$PATH\" >> ~/.bashrc
