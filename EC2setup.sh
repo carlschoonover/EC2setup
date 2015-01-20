@@ -19,4 +19,3 @@ mkdir ~/software
 cd ~/software
 wget http://repo.continuum.io/miniconda/Miniconda-3.7.0-Linux-x86_64.sh
 bash -b Miniconda-3.7.0-Linux-x86_64.sh
-exec bash
