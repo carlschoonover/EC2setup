@@ -50,7 +50,7 @@ echo export PATH=\"$PWD/:\$PATH\" >> ~/.bashrc
 ########################
 echo '### Mount data drive? ###'
 read -p "[y/Y] or any key for no: " -n 1 -r
-echo    # (optional) move to a new line
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo 'Assuming /dev/xvdc exists...'
