@@ -44,3 +44,25 @@ make
 mv KlustaKwik klustakwik 
 echo >> ~/.bashrc
 echo export PATH=\"$PWD/:\$PATH\" >> ~/.bashrc
+
+########################
+### MOUNT DATA DRIVE ###
+########################
+echo '### Mount data drive? ###'
+read -p "[y/Y] or any key for no: " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo 'Assuming /dev/xvdc exists...'
+    # Check that SDD drive is there (will return size)
+    sudo cat /sys/block/xvdc/queue/discard_max_bytes
+    # Format the drive (mkfs format)
+    sudo mkfs -t ext4 /dev/xvdc 
+    # Mount the drive
+    sudo mkdir /mnt/data
+    sudo mount /dev/xvdc /mnt/data
+    # Check if successful
+    lsblk
+    # df -h
+    sudo chown -R $USER:$USER /mnt/data
+fi
