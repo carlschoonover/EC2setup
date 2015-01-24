@@ -18,7 +18,7 @@ cd ~/software
 wget https://github.com/klusta-team/klustaviewa/releases/download/v0.3.0-rc1/klustaviewa-0.3.0.rc1.zip
 unzip klustaviewa-0.3.0.rc1.zip
 rm klustaviewa-0.3.0.rc1.zip
-# Pull the latest SD2 from the Git, and Kwiklib too
+# Pull latest versions of SpikeDetekt2 and Kwiklib
 wget https://github.com/klusta-team/kwiklib/archive/master.zip
 unzip master.zip 
 rm master.zip
@@ -38,8 +38,7 @@ python setup.py install
 cd ~/software/
 git clone https://github.com/klusta-team/klustakwik.git
 cd ~/software/klustakwik/
-############################## as of 1/14/15, i think openmp is in master branch
-############################## git checkout unmaskedcov
+# as of 1/14/15, openmp is in master branch
 make
 mv KlustaKwik klustakwik 
 echo >> ~/.bashrc
@@ -68,6 +67,9 @@ then
     sudo chown -R $USER:$USER /mnt/data
 fi
 
+###################
+### KLUSTASHELL ###
+###################
 cd /mnt/data
 wget https://raw.githubusercontent.com/carlschoonover/EC2setup/master/klustashell.sh
 chmod u+x klustashell.sh
