@@ -66,3 +66,7 @@ then
     # df -h
     sudo chown -R $USER:$USER /mnt/data
 fi
+
+cd /mnt/data
+wget https://raw.githubusercontent.com/carlschoonover/EC2setup/master/klustashell.sh
+chmod u+x klustashell.sh
