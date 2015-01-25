@@ -9,7 +9,7 @@ sudo apt-get -y --force-yes install git
 sudo apt-get -y --force-yes install build-essential 
 sudo apt-get -y --force-yes install zip unzip
 sudo apt-get -y --force-yes install mailutils
-# On 12/21/2014 there was a bug in klusta that meant it need an X11 server if running on a headless box. If necessary, install X.
+# As of 12/21/2014 klusta install needs X11 even if running on a headless server.
 sudo apt-get -y --force-yes install xorg
 sudo apt-get -y --force-yes install openbox
 
