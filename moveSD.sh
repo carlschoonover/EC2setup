@@ -1,18 +1,9 @@
-pemFile="/home/kruncheruser/current2.pem"
+pemFile=$(readlink -f $1)
 IPaddr="54.175.112.209"
 
-highFile=$PWD'/'$(ls *.high.kwd)
-kwikFile=$PWD'/'$(ls *.kwik)
-kwxFile=$PWD'/'$(ls *.kwx)
-logFile=$PWD'/'$(ls *.log)
-lowFile=$PWD'/'$(ls *.low.kwd)
-rawFile=$PWD'/'$(ls *.raw.kwd)
-prbFile=$PWD'/'$(ls *.prb)
-prmOutputFile=$PWD'/'$(ls *.txt)
-prmFile=$PWD'/'$(ls *.prm)
+echo $pemFile
 
-fileNames=ls -d -1 $PWD/*.* | grep -v '.dat'
+fileNames=$(ls -d -1 $PWD/*.* | grep -v '.dat')
+#echo $fileNames
 
-echo $fileNames
-
-$scp -i $pemFile $PWD/* kruncheruser@$IPaddr:/mnt/data/fooData/
+# scp -i $pemFile $fileNames kruncheruser@$IPaddr:/mnt/data/
