@@ -53,7 +53,7 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     diskName="xvdb"
-    echo 'Assuming /dev/$diskName exists...'
+    echo 'Assuming /dev/'$diskName' exists...'
     # Check that SDD drive is there (will return size)
     sudo cat /sys/block/$diskName/queue/discard_max_bytes
     # Format the drive (mkfs format)
