@@ -72,7 +72,7 @@ fi
 ###################
 cd /mnt/data
 shellFilesPath="https://raw.githubusercontent.com/carlschoonover/EC2setup/master/"
-wget $shellFilesPath"klustashell.sh" $shellFilesPath"SDshell.sh" $shellFilesPath"KKshell.sh" $shellFilesPath"moveSD.sh"
+wget -N $shellFilesPath"klustashell.sh" $shellFilesPath"SDshell.sh" $shellFilesPath"KKshell.sh" $shellFilesPath"moveSD.sh"
 chmod u+x klustashell.sh SDshell.sh KKshell.sh moveSD.sh
 
 exec bash
