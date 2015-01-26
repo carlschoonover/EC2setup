@@ -1,5 +1,7 @@
 pemFile=$(readlink -f $1)
-IPaddr="54.175.112.209"
+IPaddr=$2
+#IPaddr="54.175.112.209"
+
 
 echo $pemFile
 
