@@ -24,7 +24,8 @@ bash -b Miniconda-3.7.0-Linux-x86_64.sh
 ########################
 ### PULL NEXT SCRIPT ###
 ########################
-cd ~/
+cd ~/sh/
 wget https://raw.githubusercontent.com/carlschoonover/EC2setup/master/EC2setup2.sh
 chmod u+x EC2setup2.sh
+cd ~/
 exec bash
