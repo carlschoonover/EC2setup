@@ -1,5 +1,5 @@
 paramFileName=$(ls *.prm)
 outputFileName="output_KK.txt"
-experimentName=$(grep -F "experiment_name =" params.prm)
+experimentName=$(grep -F "experiment_name =" $paramFileName)
 klusta $paramFileName --cluster-only | tee $outputFileName
 echo "$experimentName KlustaKwik is done running" | mail -s "KK run completed" andrew.jp.fink@gmail.com ceschoonover@gmail.com
