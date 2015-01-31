@@ -25,10 +25,10 @@ bash -b Miniconda-3.7.0-Linux-x86_64.sh
 ### OTHER SHELL SCRIPTS ###
 ###########################
 mkdir ~/sh/
-cd ~/sh/
-shellFilesPath="https://raw.githubusercontent.com/carlschoonover/EC2setup/master/"
-wget -N $shellFilesPath"EC2setup2.sh" $shellFilesPath"klustashell.sh" $shellFilesPath"SDshell.sh" $shellFilesPath"KKshell.sh" $shellFilesPath"moveSD.sh"
-chmod u+x EC2setup2.sh klustashell.sh SDshell.sh KKshell.sh moveSD.sh
+~/sh
+git clone https://github.com/carlschoonover/EC2setup.git
+mv ~/sh/EC2setup/*.sh ~/sh/
+chmod u+x *.sh
 cd ~/
 
 exec bash
