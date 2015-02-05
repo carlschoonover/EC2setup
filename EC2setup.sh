@@ -24,7 +24,6 @@ bash -b Miniconda-3.7.0-Linux-x86_64.sh
 ###########################
 ### OTHER SHELL SCRIPTS ###
 ###########################
-mkdir ~/sh/
 ~/sh
 git clone https://github.com/carlschoonover/EC2setup.git
 mv ~/sh/EC2setup/*.sh ~/sh/
