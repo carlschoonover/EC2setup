@@ -65,6 +65,7 @@ then
     lsblk
     # df -h
     sudo chown -R $USER:$USER /mnt/data
+    rm -R /mnt/data/lost+found/
 fi
 
 exec bash
