@@ -30,4 +30,6 @@ mv ~/sh/EC2setup/*.sh ~/sh/
 chmod u+x *.sh
 cd ~/
 
+chmod 400 ~/kruncher.pem
+
 exec bash
