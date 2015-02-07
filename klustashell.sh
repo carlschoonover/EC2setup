@@ -1,2 +1,2 @@
 ./SDshell.sh
-./KKshell.sh
+./KKshell.sh 1
