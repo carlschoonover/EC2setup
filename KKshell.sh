@@ -17,4 +17,4 @@ mkdir subset-$1
 cp * subset-$1
 
 # Send confirmation email once all is done
-echo -e "$experimentName KlustaKwik KK_Subset $1 is done running\n\n$(tail -n 1 $outputFileName)" | mail -s "KlustaKwik KK_Subset $1 run completed on $(hostname)" andrew.jp.fink@gmail.com ceschoonover@gmail.com
+echo -e "$experimentName KlustaKwik KK_Subset $1 is done running\n\n$(tail -n 17 $outputFileName)" | mail -s "KlustaKwik KK_Subset $1 run completed on $(hostname)" andrew.jp.fink@gmail.com ceschoonover@gmail.com
