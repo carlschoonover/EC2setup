@@ -44,28 +44,4 @@ mv KlustaKwik klustakwik
 echo >> ~/.bashrc
 echo export PATH=\"$PWD/:\$PATH\" >> ~/.bashrc
 
-########################
-### MOUNT DATA DRIVE ###
-########################
-echo '### Mount data drive? ###'
-read -p "[y/Y] or any key for no: " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    diskName="xvdb"
-    echo 'Assuming /dev/'$diskName' exists...'
-    # Check that SDD drive is there (will return size)
-    sudo cat /sys/block/$diskName/queue/discard_max_bytes
-    # Format the drive (mkfs format)
-    sudo mkfs -t ext4 /dev/$diskName 
-    # Mount the drive
-    sudo mkdir /mnt/data
-    sudo mount /dev/$diskName /mnt/data
-    # Check if successful
-    lsblk
-    # df -h
-    sudo chown -R $USER:$USER /mnt/data
-    rm -R /mnt/data/lost+found/
-fi
-
 exec bash
